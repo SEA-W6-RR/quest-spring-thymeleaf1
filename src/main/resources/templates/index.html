@@ -8,7 +8,8 @@
 </head>
 <body>
 <header th:replace="header.html :: top">Header from header.html</header>
-<form method="get" action="doctor">
+<!-- The link to execute the form action should use a Thymeleaf expression" -->
+<form method="get" th:action="@{/doctor}">
     <fieldset>
         <label for="name">Your doctor's name: </label>
         <input id="name" name="name" type="text" placeholder="Your name here">
